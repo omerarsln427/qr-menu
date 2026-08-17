@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173d22">
+<title>QR Menü</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+background:#f4f0e6;
+color:#173d22;
+font-family:Georgia,"Times New Roman",serif;
+}
+
+.page{
+max-width:760px;
+margin:auto;
+padding:18px 12px 35px;
+}
+
+.card{
+background:#fbf8ef;
+border:2px solid #173d22;
+border-radius:28px;
+padding:28px 16px;
+box-shadow:0 8px 30px rgba(23,61,34,.12);
+}
+
+header{
+text-align:center;
+padding:8px 0 18px;
+}
+
+.icon{
+font-size:42px;
+}
+
+h1{
+margin:8px 0;
+font-size:44px;
+letter-spacing:3px;
+}
+
+.subtitle{
+font-size:18px;
+color:#4b554d;
+}
+
+.line{
+width:120px;
+height:2px;
+background:#173d22;
+margin:18px auto;
+}
+
+.item{
+display:grid;
+grid-template-columns:1fr auto;
+gap:12px;
+align-items:center;
+border:1px solid #cbbf9f;
+border-radius:20px;
+padding:20px 15px;
+margin:13px 0;
+background:rgba(255,255,255,.5);
+}
+
+.emoji{
+font-size:34px;
+}
+
+.name{
+font-size:28px;
+font-weight:bold;
+letter-spacing:1px;
+margin-top:5px;
+}
+
+.desc{
+font-size:15px;
+color:#4b554d;
+margin-top:6px;
+}
+
+.price{
+background:#173d22;
+color:white;
+border-radius:13px;
+padding:11px 15px;
+font-size:23px;
+font-weight:bold;
+white-space:nowrap;
+}
+
+footer{
+text-align:center;
+margin-top:28px;
+font-size:19px;
+}
+
+.heart{
+font-size:25px;
+margin-top:5px;
+}
+
+@media(max-width:480px){
+h1{font-size:38px}
+.subtitle{font-size:16px}
+.name{font-size:24px}
+.desc{font-size:14px}
+.price{font-size:20px;padding:10px 12px}
+.item{padding:17px 12px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+<main class="card">
+
+<header>
+<div class="icon">🍽️</div>
+
+<h1>QR MENÜ</h1>
+
+<div class="subtitle">
+Lezzetli seçenekler, kolay sipariş!
+</div>
+
+<div class="line"></div>
+</header>
+
+
+<section class="item">
+
+<div>
+<div class="emoji">🥣</div>
+
+<div class="name">
+GIRIK
+</div>
+
+<div class="desc">
+Geleneksel yöresel lezzet
+</div>
+</div>
+
+<div class="price">
+300₺
+</div>
+
+</section>
+
+
+<section class="item">
+
+<div>
+<div class="emoji">🍲</div>
+
+<div class="name">
+MEFTUNE
+</div>
+
+<div class="desc">
+Geleneksel yöresel lezzet
+</div>
+</div>
+
+<div class="price">
+300₺
+</div>
+
+</section>
+
+
+<section class="item">
+
+<div>
+<div class="emoji">🍋</div>
+
+<div class="name">
+LİMONATA
+</div>
+
+<div class="desc">
+Taze ve ferahlatıcı limonata
+</div>
+</div>
+
+<div class="price">
+100₺
+</div>
+
+</section>
+
+
+<footer>
+Afiyet olsun!
+<div class="heart">♡</div>
+</footer>
+
+</main>
+</div>
+
+</body>
+</html>
