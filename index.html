@@ -8,7 +8,7 @@
         body {
             background-color: #fdfaf5;
             background-image: 
-                url('https://www.transparenttextures.com/patterns/arabesque.png'), /* Yöresel motif hissi */
+                url('https://www.transparenttextures.com/patterns/arabesque.png'), 
                 linear-gradient(135deg, #fdfaf5 25%, #f4f0e6 100%);
             color: #2c2c2c;
             font-family: 'Georgia', serif;
@@ -23,11 +23,9 @@
             padding: 40px;
             border: 1px solid #d4c5b9;
             position: relative;
-            /* Kenarlara yöresel çerçeve efekti */
             box-shadow: 0 0 0 10px #315a3a, 0 0 0 12px #fdfaf5, 0 0 20px rgba(0,0,0,0.2);
         }
 
-        /* Sayfa Kenarları İçin Yöresel Motif Eklentisi */
         .menu-container::before, .menu-container::after {
             content: "🌿";
             position: absolute;
@@ -62,7 +60,13 @@
             margin-top: 35px;
         }
 
-        .item { display: flex; justify-content: space-between; padding: 10px 0; }
+        .item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 12px 0; 
+            border-bottom: 1px dashed #e5e0d8;
+        }
         .item-name { font-weight: bold; }
         .item-price { font-weight: bold; color: #315a3a; }
         
@@ -73,13 +77,17 @@
             padding: 15px 0;
             border-bottom: 1px dashed #c0b2a5;
         }
-        .item-desc { font-size: 12px; color: #666; font-style: italic; max-width: 80%; }
+        .item-info { max-width: 75%; }
+        .item-desc { font-size: 12px; color: #666; font-style: italic; margin-top: 4px; }
+        
         .photo-box {
             width: 80px; height: 60px;
             background: #e9e4d5;
             border: 2px solid #315a3a;
             display: flex; align-items: center; justify-content: center;
-            font-size: 10px; color: #315a3a; text-align: center;
+            font-size: 9px; color: #315a3a; text-align: center;
+            flex-shrink: 0;
+            margin-left: 15px;
         }
     </style>
 </head>
@@ -91,18 +99,108 @@
         <p>Diyarbakır’ın kadim mutfağından, kadınlarımızın el emeğiyle…</p>
     </div>
 
-    <!-- Menü İçeriğin Buraya Gelecek -->
-    <h2>DİYARBAKIR’IN YÖRESEL LEZZETLERİ</h2>
-    <div class="item-with-image">
-        <div>
-            <div class="item-name">Dolma</div>
-            <div class="item-desc">Diyarbakır'ın meşhur baharatlı ve bol yeşillikli özel dolması.</div>
-            <div class="item-price">350 TL</div>
-        </div>
-        <div class="photo-box">YEMEK<br>FOTOĞRAFI</div>
+    <!-- ÇORBA -->
+    <h2>ÇORBA</h2>
+    <div class="item">
+        <div class="item-name">Günün Çorbası</div>
+        <div class="item-price">120 TL</div>
     </div>
+
+    <!-- DİYARBAKIR'IN YÖRESEL LEZZETLERİ -->
+    <h2>DİYARBAKIR’IN YÖRESEL LEZZETLERİ</h2>
     
-    <!-- Diğer öğelerini buraya önceki gibi ekleyebilirsin -->
+    <div class="item-with-image">
+        <div class="item-info">
+            <div class="item-name">Dolma</div>
+            <div class="item-desc">Diyarbakır sofralarının sevilen, kadınlarımızın el emeğiyle hazırlanan geleneksel lezzetlerinden.</div>
+            <div class="item-price" style="margin-top: 6px;">350 TL</div>
+        </div>
+        <div class="photo-box">FOTOĞRAF</div>
+    </div>
+
+    <div class="item-with-image">
+        <div class="item-info">
+            <div class="item-name">İçli Köfte</div>
+            <div class="item-desc">İnce bulgurun maharetli ellerde şekillendiği, Diyarbakır mutfağının vazgeçilmez yöresel tatlarından.</div>
+            <div class="item-price" style="margin-top: 6px;">350 TL</div>
+        </div>
+        <div class="photo-box">FOTOĞRAF</div>
+    </div>
+
+    <div class="item-with-image">
+        <div class="item-info">
+            <div class="item-name">Mantı</div>
+            <div class="item-desc">Özenle açılıp hazırlanan, ev yapımı sıcaklığıyla Diyarbakır sofralarını hatırlatan bir lezzet.</div>
+            <div class="item-price" style="margin-top: 6px;">350 TL</div>
+        </div>
+        <div class="photo-box">FOTOĞRAF</div>
+    </div>
+
+    <div class="item-with-image">
+        <div class="item-info">
+            <div class="item-name">Gırık</div>
+            <div class="item-desc">Diyarbakır yöresinin geleneksel mutfak kültürünü yansıtan, el emeğiyle hazırlanan özel bir yemek.</div>
+            <div class="item-price" style="margin-top: 6px;">350 TL</div>
+        </div>
+        <div class="photo-box">FOTOĞRAF</div>
+    </div>
+
+    <div class="item-with-image">
+        <div class="item-info">
+            <div class="item-name">Meftune</div>
+            <div class="item-desc">Diyarbakır mutfağının kendine özgü ekşili lezzetiyle öne çıkan, sofraların sevilen yöresel yemeği.</div>
+            <div class="item-price" style="margin-top: 6px;">350 TL</div>
+        </div>
+        <div class="photo-box">FOTOĞRAF</div>
+    </div>
+
+    <!-- ANA YEMEKLER -->
+    <h2>ANA YEMEKLER</h2>
+    <div class="item"><div class="item-name">Güveç & Pilav</div><div class="item-price">350 TL</div></div>
+    <div class="item"><div class="item-name">Et Sote & Pilav</div><div class="item-price">500 TL</div></div>
+    <div class="item"><div class="item-name">Mumbar</div><div class="item-price">550 TL</div></div>
+    <div class="item"><div class="item-name">Günün Yemeği</div><div class="item-price">350 TL</div></div>
+
+    <!-- GÖZLEME ÇEŞİTLERİ -->
+    <h2>GÖZLEME ÇEŞİTLERİ</h2>
+    <div class="item"><div class="item-name">Gözleme</div><div class="item-price">150 TL</div></div>
+    <div class="item"><div class="item-name">Peynirli Gözleme</div><div class="item-price">150 TL</div></div>
+    <div class="item"><div class="item-name">Patatesli Gözleme</div><div class="item-price">150 TL</div></div>
+    <div class="item"><div class="item-name">Kıymalı Gözleme</div><div class="item-price">200 TL</div></div>
+
+    <!-- KAHVE ÇEŞİTLERİ -->
+    <h2>KAHVE ÇEŞİTLERİ</h2>
+    <div class="item"><div class="item-name">Espresso</div><div class="item-price">120 TL</div></div>
+    <div class="item"><div class="item-name">Cappuccino</div><div class="item-price">120 TL</div></div>
+    <div class="item"><div class="item-name">Americano</div><div class="item-price">120 TL</div></div>
+    <div class="item"><div class="item-name">Latte Macchiato</div><div class="item-price">120 TL</div></div>
+    <div class="item"><div class="item-name">Flat White</div><div class="item-price">120 TL</div></div>
+    <div class="item"><div class="item-name">Türk Kahvesi</div><div class="item-price">110 TL</div></div>
+    <div class="item"><div class="item-name">Menengiç Kahvesi</div><div class="item-price">110 TL</div></div>
+    <div class="item"><div class="item-name">Dibek Kahvesi</div><div class="item-price">110 TL</div></div>
+    <div class="item"><div class="item-name">Kürt Kahvesi</div><div class="item-price">110 TL</div></div>
+    <div class="item"><div class="item-name">Özel Karışım Kahve</div><div class="item-price">125 TL</div></div>
+
+    <!-- SOĞUK İÇECEKLER -->
+    <h2>SOĞUK İÇECEKLER</h2>
+    <div class="item"><div class="item-name">Su</div><div class="item-price">25 TL</div></div>
+    <div class="item"><div class="item-name">Limonata</div><div class="item-price">120 TL</div></div>
+    <div class="item"><div class="item-name">Reyhan Şerbeti</div><div class="item-price">120 TL</div></div>
+    <div class="item"><div class="item-name">Hibiskus Şerbeti</div><div class="item-price">120 TL</div></div>
+    <div class="item"><div class="item-name">Ayran</div><div class="item-price">50 TL</div></div>
+    <div class="item"><div class="item-name">Soda</div><div class="item-price">50 TL</div></div>
+    <div class="item"><div class="item-name">Kola</div><div class="item-price">70 TL</div></div>
+    <div class="item"><div class="item-name">Meyveli Soda</div><div class="item-price">50 TL</div></div>
+    <div class="item"><div class="item-name">Soğuk Çay</div><div class="item-price">70 TL</div></div>
+
+    <!-- TATLI -->
+    <h2>TATLI</h2>
+    <div class="item"><div class="item-name">Sütlaç</div><div class="item-price">110 TL</div></div>
+    <div class="item"><div class="item-name">Fıstık Rüyası</div><div class="item-price">220 TL</div></div>
+    <div class="item"><div class="item-name">Cocostar</div><div class="item-price">220 TL</div></div>
+    <div class="item"><div class="item-name">Yaban Mersinli Cheesecake</div><div class="item-price">220 TL</div></div>
+    <div class="item"><div class="item-name">Dondurma</div><div class="item-price">50 TL</div></div>
+    <div class="item"><div class="item-name">Buzlaş</div><div class="item-price">50 TL</div></div>
 
 </div>
 
