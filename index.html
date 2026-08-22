@@ -7,7 +7,9 @@
     <style>
         body {
             background-color: #fdfaf5;
-            background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'), linear-gradient(135deg, #fdfaf5 25%, #f4f0e6 100%);
+            background-image: 
+                url('https://www.transparenttextures.com/patterns/arabesque.png'), 
+                linear-gradient(135deg, #fdfaf5 25%, #f4f0e6 100%);
             color: #2c2c2c;
             font-family: 'Georgia', serif;
             margin: 0;
@@ -24,40 +26,86 @@
             box-shadow: 0 0 0 10px #315a3a, 0 0 0 12px #fdfaf5, 0 0 20px rgba(0,0,0,0.2);
         }
 
-        /* Sadece sol üst köşeye logo yerleşimi */
-        .corner-logo {
-            position: absolute;
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #315a3a;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Ortadaki büyük logo tasarımı */
+        .header-logo {
             width: 100px; 
-            opacity: 1; 
-            top: 10px; 
-            left: 10px;
+            height: 100px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 15px; 
+            border: 3px solid #315a3a; 
+            display: block; 
+            margin-left: auto; 
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        .header { text-align: center; border-bottom: 2px solid #315a3a; padding-bottom: 20px; margin-bottom: 30px; }
-        .header h1 { color: #315a3a; font-size: 28px; margin: 0; text-transform: uppercase; }
-        .header p { color: #555; font-style: italic; font-size: 14px; }
+        .header h1 {
+            color: #315a3a;
+            font-size: 28px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .header p {
+            color: #555;
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 5px;
+        }
 
-        h2 { color: #315a3a; font-size: 18px; border-bottom: 1px solid #315a3a; padding-bottom: 5px; margin-top: 35px; }
+        h2 {
+            color: #315a3a;
+            font-size: 18px;
+            border-bottom: 1px solid #315a3a;
+            padding-bottom: 5px;
+            margin-top: 35px;
+        }
 
-        .item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px dashed #e5e0d8; }
+        .item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 12px 0; 
+            border-bottom: 1px dashed #e5e0d8;
+        }
         .item-name { font-weight: bold; }
         .item-price { font-weight: bold; color: #315a3a; }
         
-        .item-with-image { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px dashed #c0b2a5; }
+        .item-with-image {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dashed #c0b2a5;
+        }
         .item-info { max-width: 75%; }
         .item-desc { font-size: 12px; color: #666; font-style: italic; margin-top: 4px; }
-        .photo-box { width: 80px; height: 60px; background: #e9e4d5; border: 2px solid #315a3a; display: flex; align-items: center; justify-content: center; font-size: 9px; color: #315a3a; text-align: center; flex-shrink: 0; margin-left: 15px; }
+        
+        .photo-box {
+            width: 80px; height: 60px;
+            background: #e9e4d5;
+            border: 2px solid #315a3a;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 9px; color: #315a3a; text-align: center;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
     </style>
 </head>
 <body>
 
 <div class="menu-container">
-    <!-- Sadece Sol Üst Köşe Logosu -->
-    <img src="logo.png" class="corner-logo" alt="Logo">
-
+    
     <div class="header">
-        <!-- Logoyu başlığın tam üstüne ortalıyoruz -->
-        <img src="logo.png" alt="Hevsel Logo" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 2px solid #315a3a; display: block; margin-left: auto; margin-right: auto;">
+        <!-- Büyük Net Logo -->
+        <img src="logo.png" alt="Hevsel Logo" class="header-logo">
         
         <h1>HEVSEL YÖRESEL LEZZETLER</h1>
         <p>Diyarbakır’ın kadim mutfağından, kadınlarımızın el emeğiyle…</p>
@@ -121,15 +169,16 @@
     <!-- ANA YEMEKLER -->
     <h2>ANA YEMEKLER</h2>
     <div class="item"><div class="item-name">Güveç & Pilav</div><div class="item-price">350 TL</div></div>
-    <div class="item"><div class="item-name">Et Sote & Pilav</div><div class="item-price">400 TL</div></div>
-    <div class="item"><div class="item-name">Mumbar</div><div class="item-price">500 TL</div></div>
-    <div class="item"><div class="item-name">Günün Yemeği</div><div class="item-price">300 TL</div></div>
+    <div class="item"><div class="item-name">Et Sote & Pilav</div><div class="item-price">500 TL</div></div>
+    <div class="item"><div class="item-name">Mumbar</div><div class="item-price">550 TL</div></div>
+    <div class="item"><div class="item-name">Günün Yemeği</div><div class="item-price">350 TL</div></div>
 
     <!-- GÖZLEME ÇEŞİTLERİ -->
     <h2>GÖZLEME ÇEŞİTLERİ</h2>
-    <div class="item"><div class="item-name">Peynirli</div><div class="item-price">150 TL</div></div>
-    <div class="item"><div class="item-name">Patatesli</div><div class="item-price">150 TL</div></div>
-    <div class="item"><div class="item-name">Kıymalı</div><div class="item-price">200 TL</div></div>
+    <div class="item"><div class="item-name">Gözleme</div><div class="item-price">150 TL</div></div>
+    <div class="item"><div class="item-name">Peynirli Gözleme</div><div class="item-price">150 TL</div></div>
+    <div class="item"><div class="item-name">Patatesli Gözleme</div><div class="item-price">150 TL</div></div>
+    <div class="item"><div class="item-name">Kıymalı Gözleme</div><div class="item-price">200 TL</div></div>
 
     <!-- KAHVE ÇEŞİTLERİ -->
     <h2>KAHVE ÇEŞİTLERİ</h2>
